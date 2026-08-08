@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora interna de tarifas — Uso privado</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{
+  --black:#0a0e14;
+  --graphite:#151a21;
+  --graphite-2:#1d232c;
+  --accent:#1b6b7a;
+  --accent-light:#2a8fa3;
+  --gold:#c9a24d;
+  --gold-light:#e3c07a;
+  --gray-700:#9aa3ad;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  background:var(--black);
+  color:#fff;
+  line-height:1.6;
+  padding:32px 20px 80px;
+}
+.wrap{max-width:900px;margin:0 auto;}
+.warn{
+  background:rgba(201,162,77,.12);border:1px solid rgba(201,162,77,.4);color:var(--gold-light);
+  padding:14px 20px;border-radius:12px;font-size:.85rem;font-weight:600;margin-bottom:28px;
+}
+h1{font-size:1.6rem;margin-bottom:6px;}
+.subtitle{color:var(--gray-700);font-size:.92rem;margin-bottom:32px;}
+h2{font-size:1.1rem;margin-bottom:16px;color:#fff;}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start;}
+.card{background:var(--graphite);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;margin-bottom:24px;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:.82rem;color:var(--gray-700);margin-bottom:7px;font-weight:500;}
+.field input{
+  width:100%;background:var(--graphite-2);border:1px solid rgba(255,255,255,.12);border-radius:9px;
+  padding:11px 13px;color:#fff;font-size:.92rem;font-family:inherit;
+}
+.field input:focus{outline:none;border-color:var(--accent-light);}
+.checkbox{display:flex;align-items:center;gap:9px;margin-bottom:16px;}
+.checkbox input{width:17px;height:17px;accent-color:var(--accent-light);}
+.checkbox label{font-size:.85rem;color:var(--gray-700);}
+.note{font-size:.76rem;color:var(--gray-700);margin-top:-8px;margin-bottom:16px;}
+.maps-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;
+  padding:11px 18px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;margin-top:4px;
+}
+.maps-btn:hover{background:rgba(255,255,255,.08);}
+.result-card{background:linear-gradient(150deg,var(--accent),#123f49);border-radius:var(--radius);padding:28px;}
+.result-card .label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.75);}
+.result-card .price{font-size:2.2rem;font-weight:800;margin:8px 0 18px;}
+.breakdown{display:flex;flex-direction:column;gap:9px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:.85rem;}
+.breakdown div{display:flex;justify-content:space-between;}
+.breakdown .total{font-weight:700;padding-top:8px;border-top:1px dashed rgba(255,255,255,.3);margin-top:2px;}
+.compare{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);font-size:.85rem;color:rgba(255,255,255,.8);}
+.compare strong{color:#fff;}
+.formula{font-size:.82rem;color:var(--gray-700);background:var(--graphite-2);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
+.formula code{color:#fff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="warn">⚠️ Uso interno — no comparta este archivo ni el enlace con clientes.</div>
+  <h1>Calculadora interna de tarifas</h1>
+  <p class="subtitle">Tarifa fija de <strong>$1.500 por kilómetro</strong>. Ingrese la distancia y calcule el precio del servicio; a continuación podrá ver la ganancia real frente al costo de operación.</p>
+
+  <div class="grid">
+    <div>
+      <div class="card">
+        <h2>Datos del servicio</h2>
+        <div class="field">
+          <label for="origen">Origen (opcional, solo para ver el mapa)</label>
+          <input type="text" id="origen" placeholder="Ej. Chapinero, Bogotá">
+        </div>
+        <div class="field">
+          <label for="destino">Destino</label>
+          <input type="text" id="destino" placeholder="Ej. Zona Franca, Bogotá">
+        </div>
+        <button type="button" class="maps-btn" id="mapsBtn">Ver ruta en Google Maps</button>
+
+        <div class="row" style="margin-top:20px;">
+          <div class="field">
+            <label for="distancia">Distancia (km)</label>
+            <input type="number" id="distancia" min="0" step="0.5" value="14">
+          </div>
+          <div class="field">
+            <label for="tarifakm">Tarifa por km (COP)</label>
+            <input type="number" id="tarifakm" min="0" step="50" value="1500">
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="roundtrip">
+          <label for="roundtrip">Servicio con ida y vuelta</label>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="tarifabase">Tarifa fija de 0 a 5 km (COP)</label>
+            <input type="number" id="tarifabase" min="0" step="500" value="7500">
+          </div>
+          <div class="field">
+            <label for="umbral">Hasta cuántos km aplica esa tarifa fija</label>
+            <input type="number" id="umbral" min="0" step="0.5" value="5">
+          </div>
+        </div>
+        <p class="note">De 0 a 5 km se cobra la tarifa fija de $7.500. Superado ese límite, se cobra $1.500 por cada kilómetro recorrido (sobre el total del trayecto, incluyendo ida y vuelta si aplica).</p>
+      </div>
+
+      <div class="card">
+        <h2>Costo real de operación (para verificar ganancia)</h2>
+        <div class="row">
+          <div class="field">
+            <label for="rendimiento">Rendimiento (km por galón)</label>
+            <input type="number" id="rendimiento" min="1" value="42">
+          </div>
+          <div class="field">
+            <label for="preciogalon">Precio del galón (COP)</label>
+            <input type="number" id="preciogalon" min="0" step="500" value="16000">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="mantenimiento">Reserva mantenimiento (%)</label>
+            <input type="number" id="mantenimiento" min="0" value="10">
+          </div>
+          <div class="field">
+            <label for="operacion">Costo de tiempo / operación (COP)</label>
+            <input type="number" id="operacion" min="0" step="500" value="8133">
+          </div>
+        </div>
+        <div class="field">
+          <label for="extras">Costos adicionales — peajes, parqueadero (COP)</label>
+          <input type="number" id="extras" min="0" step="1000" value="0">
+        </div>
+        <p class="note">"Costo de tiempo / operación" cubre lo que el combustible no cubre: el tiempo como conductor, el desgaste general y la disponibilidad del vehículo.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="result-card">
+        <span class="label">Precio del servicio (tarifa fija por km)</span>
+        <div class="price" id="r-precio">$0</div>
+        <div class="breakdown">
+          <div><span>Combustible</span><span id="r-combustible">$0</span></div>
+          <div><span>Mantenimiento</span><span id="r-mantenimiento">$0</span></div>
+          <div><span>Tiempo / operación</span><span id="r-operacion">$0</span></div>
+          <div><span>Costos adicionales</span><span id="r-extras">$0</span></div>
+          <div class="total"><span>Costo total (gasto real)</span><span id="r-costo">$0</span></div>
+          <div class="total"><span>Ganancia neta</span><span id="r-ganancia">$0</span></div>
+          <div><span>Margen real sobre el costo</span><span id="r-margen-real">0%</span></div>
+        </div>
+        <div class="compare" id="r-comparacion"></div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <h2>Referencia de mercado</h2>
+        <div class="row">
+          <div class="field">
+            <label for="ref-tarifa">Tarifa de referencia, ej. Uber (COP)</label>
+            <input type="number" id="ref-tarifa" min="0" step="500" value="20000">
+          </div>
+          <div class="field">
+            <label for="ref-km">Distancia de esa referencia (km)</label>
+            <input type="number" id="ref-km" min="0" step="0.5" value="14">
+          </div>
+        </div>
+        <p class="note">Ingrese un dato real conocido para comparar la tarifa por km propia contra el precio de mercado en esa misma distancia.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Fórmula usada</h2>
+    <div class="formula">1. <code>Precio del servicio</code> = si Distancia total ≤ umbral (5 km) → tarifa fija ($7.500); si no → Distancia total × tarifa por km ($1.500)</div>
+    <div class="formula">2. <code>Combustible</code> = (Distancia total ÷ rendimiento) × precio del galón</div>
+    <div class="formula">3. <code>Mantenimiento</code> = Combustible × % mantenimiento</div>
+    <div class="formula">4. <code>Costo total</code> = Combustible + Mantenimiento + Tiempo/operación + Extras</div>
+    <div class="formula">5. <code>Ganancia</code> = Precio del servicio − Costo total</div>
+  </div>
+
+  <div class="card">
+    <h2>Proyección mensual (interno)</h2>
+    <div class="row">
+      <div class="field">
+        <label for="f-servicios">Servicios promedio por semana</label>
+        <input type="number" id="f-servicios" min="0" value="10">
+      </div>
+      <div class="field">
+        <label for="f-semanas">Semanas operativas al mes</label>
+        <input type="number" id="f-semanas" min="1" step="0.1" value="4.3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="f-tarifa">Tarifa promedio por servicio (COP) — usa el "Precio del servicio" de arriba</label>
+        <input type="number" id="f-tarifa" min="0" step="1000" value="20000">
+      </div>
+      <div class="field">
+        <label for="f-costo">Costo promedio por servicio (COP) — usa el "Costo total" de arriba</label>
+        <input type="number" id="f-costo" min="0" step="500" value="14000">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <p class="note" style="margin-top:14px;">Ingresos estimados / mes</p>
+        <div style="font-size:1.4rem;font-weight:800;" id="p-ingresos">$0</div>
+      </div>
+      <div>
+        <p class="note" style="margin-top:14px;">Ganancia estimada / mes</p>
+        <div style="font-size:1.4rem;font-weight:800;color:var(--gold-light);" id="p-ganancia">$0</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const cop = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 });
+const ids = ['distancia','roundtrip','tarifakm','tarifabase','umbral','rendimiento','preciogalon','mantenimiento','operacion','extras'];
+const el = {};
+ids.forEach(id => el[id] = document.getElementById(id));
+const refEl = { tarifa: document.getElementById('ref-tarifa'), km: document.getElementById('ref-km') };
+
+function calcular() {
+  const distancia = parseFloat(el.distancia.value) || 0;
+  const roundtrip = el.roundtrip.checked;
+  const tarifaKm = parseFloat(el.tarifakm.value) || 0;
+  const tarifaBase = parseFloat(el.tarifabase.value) || 0;
+  const umbral = parseFloat(el.umbral.value) || 0;
+  const rendimiento = parseFloat(el.rendimiento.value) || 1;
+  const precioGalon = parseFloat(el.preciogalon.value) || 0;
+  const mantenimientoPct = parseFloat(el.mantenimiento.value) || 0;
+  const operacion = parseFloat(el.operacion.value) || 0;
+  const extras = parseFloat(el.extras.value) || 0;
+
+  const distanciaTotal = distancia * (roundtrip ? 2 : 1);
+  const precio = distanciaTotal <= umbral ? tarifaBase : distanciaTotal * tarifaKm;
+
+  const combustible = rendimiento > 0 ? (distanciaTotal / rendimiento) * precioGalon : 0;
+  const mantenimiento = combustible * (mantenimientoPct / 100);
+  const costo = combustible + mantenimiento + operacion + extras;
+  const ganancia = precio - costo;
+  const margenReal = costo > 0 ? (ganancia / costo) * 100 : 0;
+
+  document.getElementById('r-precio').textContent = cop.format(precio);
+  document.getElementById('r-combustible').textContent = cop.format(combustible);
+  document.getElementById('r-mantenimiento').textContent = cop.format(mantenimiento);
+  document.getElementById('r-operacion').textContent = cop.format(operacion);
+  document.getElementById('r-extras').textContent = cop.format(extras);
+  document.getElementById('r-costo').textContent = cop.format(costo);
+  document.getElementById('r-ganancia').textContent = cop.format(ganancia);
+  document.getElementById('r-margen-real').textContent = margenReal.toFixed(1) + '%';
+
+  const refTarifa = parseFloat(refEl.tarifa.value) || 0;
+  const refKm = parseFloat(refEl.km.value) || 0;
+  const compEl = document.getElementById('r-comparacion');
+  if (refTarifa > 0 && refKm > 0 && distanciaTotal > 0) {
+    const tuPorKm = precio / distanciaTotal;
+    const refPorKm = refTarifa / refKm;
+    const diffPct = ((tuPorKm - refPorKm) / refPorKm) * 100;
+    const signo = diffPct >= 0 ? 'más caro' : 'más barato';
+    compEl.innerHTML = `Tarifa propia por km: <strong>${cop.format(tuPorKm)}</strong> · Referencia por km: <strong>${cop.format(refPorKm)}</strong><br>El precio calculado queda <strong>${Math.abs(diffPct).toFixed(1)}% ${signo}</strong> respecto a la referencia para esta distancia.`;
+  } else {
+    compEl.textContent = '';
+  }
+}
+ids.forEach(id => el[id].addEventListener('input', calcular));
+refEl.tarifa.addEventListener('input', calcular);
+refEl.km.addEventListener('input', calcular);
+calcular();
+
+document.getElementById('mapsBtn').addEventListener('click', () => {
+  const origin = document.getElementById('origen').value.trim();
+  const destination = document.getElementById('destino').value.trim();
+  if (!destination) { alert('Ingrese al menos el destino.'); return; }
+  const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent((origin || '') + ', Colombia')}&destination=${encodeURIComponent(destination + ', Colombia')}`;
+  window.open(url, '_blank', 'noopener');
+});
+
+const fIds = ['f-servicios','f-semanas','f-tarifa','f-costo'];
+const fEl = {}; fIds.forEach(id => fEl[id] = document.getElementById(id));
+function calcularPronostico() {
+  const serviciosSemana = parseFloat(fEl['f-servicios'].value) || 0;
+  const semanasMes = parseFloat(fEl['f-semanas'].value) || 0;
+  const tarifa = parseFloat(fEl['f-tarifa'].value) || 0;
+  const costoPromedio = parseFloat(fEl['f-costo'].value) || 0;
+  const serviciosMes = serviciosSemana * semanasMes;
+  const ingresos = serviciosMes * tarifa;
+  const ganancia = ingresos - (serviciosMes * costoPromedio);
+  document.getElementById('p-ingresos').textContent = cop.format(ingresos);
+  document.getElementById('p-ganancia').textContent = cop.format(ganancia);
+}
+fIds.forEach(id => fEl[id].addEventListener('input', calcularPronostico));
+calcularPronostico();
+</script>
+</body>
+</html>

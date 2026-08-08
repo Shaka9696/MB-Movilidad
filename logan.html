@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MB Movilidad | Soluciones de transporte corporativo y particular en Colombia</title>
+<meta name="description" content="MB Movilidad: soluciones de movilidad confiables y de alto estándar en Colombia, tanto para organizaciones (traslados corporativos, colaboradores, servicios programados) como para clientes particulares y familias (trabajo, viajes intermunicipales, paseos). Solicite su cotización.">
+<meta property="og:title" content="MB Movilidad | Soluciones de transporte corporativo y particular en Colombia">
+<meta property="og:description" content="MB Movilidad: movilidad confiable y de alto estándar, para su organización y para usted. Servicios programados, traslados corporativos y viajes personales o familiares.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0e14%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 fill=%22%231b6b7a%22 text-anchor=%22middle%22 font-family=%22Arial%22>MB</text></svg>">
+<!-- Google Fonts: tipografía premium para look corporativo (Playfair Display en titulares, Inter en texto) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0e14;
+  --graphite:#151a21;
+  --graphite-2:#1d232c;
+  --white:#ffffff;
+  --gray-100:#f5f6f7;
+  --gray-300:#c7cdd4;
+  --gray-500:#8992a0;
+  --gray-700:#4b5563;
+  --accent:#1b6b7a;
+  --accent-light:#2a8fa3;
+  --gold:#c9a24d;
+  --gold-light:#e3c07a;
+  --indigo:#3f4f82;
+  --indigo-light:#6577b8;
+  --radius:14px;
+  --max:1180px;
+  --ease:cubic-bezier(.16,.84,.44,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;
+  background:var(--white);
+  color:var(--black);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+section{padding:96px 0;}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.01em;}
+.logo{font-family:'Playfair Display',Georgia,serif;}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.75rem;
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:14px;
+  display:block;
+}
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:14px;color:var(--black);}
+.section-head p{color:var(--gray-700);font-size:1.05rem;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 30px;border-radius:999px;font-weight:600;font-size:.95rem;
+  border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  white-space:nowrap;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-light));color:#fff;box-shadow:0 8px 24px rgba(27,107,122,.3);}
+.btn-primary:hover{box-shadow:0 14px 34px rgba(27,107,122,.4);transform:translateY(-2px);}
+.btn .arrow{display:inline-block;transition:transform .25s var(--ease);}
+.btn:hover .arrow{transform:translateX(4px);}
+.btn-dark{background:var(--black);color:#fff;}
+.btn-dark:hover{background:#000;transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.3);}
+.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.35);}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6);}
+.btn-outline-dark{background:transparent;color:var(--black);border-color:rgba(0,0,0,.2);}
+.btn-outline-dark:hover{background:rgba(0,0,0,.04);border-color:var(--black);}
+
+/* TRUST BAR */
+.trust-bar{
+  background:var(--black);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:16px 0;
+  overflow:hidden;
+  position:relative;
+}
+.trust-track{
+  display:flex;gap:56px;white-space:nowrap;
+  animation:marquee 26s linear infinite;
+  width:max-content;
+}
+.trust-track span{
+  color:rgba(255,255,255,.55);
+  font-size:.78rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:600;
+  display:flex;align-items:center;gap:10px;
+}
+.trust-track span::before{content:"✦";color:var(--accent-light);font-size:.7rem;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* CAR ILLUSTRATION */
+.car-illustration{width:100%;height:auto;}
+.car-illustration .glow{opacity:.55;}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:18px 0;
+  background:rgba(10,14,20,0);
+  transition:background .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease);
+}
+header.scrolled{
+  background:rgba(10,14,20,.92);
+  backdrop-filter:blur(10px);
+  padding:12px 0;
+  box-shadow:0 4px 24px rgba(0,0,0,.15);
+}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:#fff;letter-spacing:-.01em;}
+.logo-mark{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-light));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:1rem;flex-shrink:0;}
+nav.links{display:flex;gap:20px;}
+nav.links a{color:rgba(255,255,255,.82);font-size:.82rem;font-weight:500;transition:color .2s;position:relative;padding-bottom:4px;white-space:nowrap;}
+nav.links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:linear-gradient(90deg,var(--accent-light),var(--gold-light));
+  transition:width .3s var(--ease);
+}
+nav.links a:hover{color:#fff;}
+nav.links a:hover::after{width:100%;}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.nav-cta .btn{padding:11px 22px;font-size:.88rem;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.menu-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s;}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(160deg,var(--black) 0%,var(--graphite) 55%,#10151c 100%);
+  color:#fff;
+  padding-top:120px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(27,107,122,.35), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(201,162,77,.14), transparent 40%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(circle at 30% 40%, #000 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:2;
+}
+.hero-text .eyebrow{color:var(--accent-light);}
+.hero-text h1{
+  font-size:clamp(2.4rem,5vw,3.6rem);
+  line-height:1.08;
+  margin-bottom:22px;
+  color:#fff;
+}
+.hero-text h1 span{color:var(--accent-light);}
+.hero-text p{
+  font-size:1.12rem;color:rgba(255,255,255,.72);max-width:520px;margin-bottom:36px;
+}
+.audience-toggle{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+.audience-btn{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;padding:10px 18px 10px 10px;
+  font-size:.85rem;font-weight:600;color:#fff;
+  transition:.25s var(--ease);
+}
+.audience-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);transform:translateY(-2px);}
+.audience-icon{
+  width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent),var(--accent-light));
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.audience-icon svg{width:15px;height:15px;}
+.audience-btn:nth-child(2) .audience-icon{background:linear-gradient(135deg,var(--gold),var(--gold-light));}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px;}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;}
+.hero-stats div{border-left:2px solid rgba(255,255,255,.15);padding-left:14px;}
+.hero-stats strong{display:block;font-size:1.3rem;color:#fff;}
+.hero-stats span{font-size:.82rem;color:rgba(255,255,255,.55);}
+
+.hero-visual{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  aspect-ratio:4/5;
+  background:radial-gradient(circle at 50% 45%, #ffffff 0%, #eef1f3 70%, #dfe3e7 100%);
+  border:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:30px;
+  animation:floatIn 1s var(--ease) both .15s;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+}
+.hero-visual .ph-inner{padding:40px;color:rgba(255,255,255,.45);}
+.hero-visual .ph-icon{font-size:2.6rem;margin-bottom:14px;}
+.hero-visual .ph-label{font-weight:600;color:rgba(255,255,255,.75);margin-bottom:6px;}
+.hero-visual .ph-sub{font-size:.85rem;color:rgba(255,255,255,.4);}
+.hero-chip{
+  position:absolute;top:22px;left:22px;z-index:3;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(10,14,20,.85);
+  backdrop-filter:blur(6px);
+  color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.03em;
+  padding:9px 16px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+.hero-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 4px rgba(230,193,122,.25);}
+.hero-badge-price{
+  position:absolute;bottom:22px;right:22px;z-index:3;
+  background:linear-gradient(135deg,var(--accent),var(--accent-light));
+  color:#fff;padding:12px 18px;border-radius:14px;
+  font-size:.8rem;font-weight:600;
+  box-shadow:0 14px 28px rgba(27,107,122,.35);
+}
+
+@keyframes floatIn{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* SERVICES */
+#servicios{position:relative;}
+#servicios::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(27,107,122,.12) 1.5px, transparent 1.5px);
+  background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image:linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  pointer-events:none;
+}
+.services-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;
+}
+.service-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:34px 26px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  border:1px solid #eceff2;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--card-c1,var(--accent)),var(--card-c2,var(--accent-light)));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 48px rgba(10,14,20,.12);
+  border-color:transparent;
+}
+.service-card:hover::before{transform:scaleX(1);}
+.service-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,var(--card-c1,var(--accent)),var(--card-c2,var(--accent-light)));
+  display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:#fff;
+  box-shadow:0 10px 20px -6px var(--card-c1,var(--accent));
+  transition:transform .35s var(--ease);
+}
+.service-icon svg{width:24px;height:24px;}
+.service-card:hover .service-icon{transform:scale(1.08) rotate(-4deg);}
+.service-card h3{font-size:1.05rem;margin-bottom:10px;color:var(--black);}
+.service-card p{font-size:.9rem;color:var(--gray-700);}
+.service-card:nth-child(4n+1){--card-c1:#1b6b7a;--card-c2:#2a8fa3;}
+.service-card:nth-child(4n+2){--card-c1:#b8893c;--card-c2:var(--gold-light);}
+.service-card:nth-child(4n+3){--card-c1:#3f4f82;--card-c2:var(--indigo-light);}
+.service-card:nth-child(4n+0){--card-c1:#20262f;--card-c2:#454c5c;}
+
+/* WHY US */
+.why{background:var(--graphite);color:#fff;position:relative;overflow:hidden;}
+.why::before{
+  content:"";position:absolute;top:-120px;right:-120px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle, rgba(42,143,163,.28), transparent 70%);
+  pointer-events:none;
+}
+.why::after{
+  content:"";position:absolute;bottom:-140px;left:-100px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,77,.16), transparent 70%);
+  pointer-events:none;
+}
+.why .section-head h2{color:#fff;}
+.why .section-head p{color:rgba(255,255,255,.6);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;position:relative;}
+.why-item{
+  background:var(--graphite);padding:36px 30px;
+  transition:background .3s var(--ease),transform .3s var(--ease);
+  position:relative;
+}
+.why-item:hover{background:#1c2530;transform:translateY(-4px);z-index:2;}
+.why-item .num{
+  width:42px;height:42px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--card-c1,var(--accent)),var(--card-c2,var(--accent-light)));
+  color:#fff;margin-bottom:18px;
+  box-shadow:0 10px 22px -8px var(--card-c1,var(--accent));
+}
+.why-item .num svg{width:20px;height:20px;}
+.why-item h3{font-size:1.1rem;margin-bottom:10px;}
+.why-item p{color:rgba(255,255,255,.6);font-size:.92rem;}
+.why-item:nth-child(6n+1){--card-c1:#1b6b7a;--card-c2:#2a8fa3;}
+.why-item:nth-child(6n+2){--card-c1:#b8893c;--card-c2:var(--gold-light);}
+.why-item:nth-child(6n+3){--card-c1:#3f4f82;--card-c2:var(--indigo-light);}
+.why-item:nth-child(6n+4){--card-c1:#8a4a4a;--card-c2:#c17a7a;}
+.why-item:nth-child(6n+5){--card-c1:#1b6b7a;--card-c2:#2a8fa3;}
+.why-item:nth-child(6n+6){--card-c1:#3f4f82;--card-c2:var(--indigo-light);}
+.why-item-ethics{
+  grid-column:1/-1;
+  background:linear-gradient(120deg, #1c2a1f, var(--graphite) 60%);
+  --card-c1:#c9a24d;--card-c2:#e3c07a;
+  display:flex;align-items:center;gap:24px;
+  border-top:1px solid rgba(201,162,77,.3);
+}
+.why-item-ethics .num{flex-shrink:0;margin-bottom:0;}
+.why-item-ethics h3{color:var(--gold-light);}
+
+.promise-banner{
+  position:relative;z-index:2;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(201,162,77,.3);
+  border-radius:20px;
+  padding:36px 40px;
+  margin-bottom:40px;
+  text-align:center;
+}
+.promise-slogan{
+  font-family:'Playfair Display',Georgia,serif;
+  font-style:italic;
+  font-size:clamp(1.3rem,2.4vw,1.7rem);
+  color:#fff;
+  margin-bottom:14px;
+}
+.promise-text{
+  color:rgba(255,255,255,.65);
+  font-size:.95rem;
+  max-width:680px;
+  margin:0 auto;
+}
+
+/* CORPORATE */
+.corporate{
+  background:linear-gradient(135deg,var(--accent) 0%,#12505b 100%);
+  color:#fff;
+  border-radius:24px;
+  margin:0 24px;
+  padding:70px 60px;
+  position:relative;
+  overflow:hidden;
+}
+.corporate::before{
+  content:"";position:absolute;top:-80px;right:10%;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.14), transparent 70%);
+  pointer-events:none;
+}
+.corporate::after{
+  content:"";position:absolute;bottom:-100px;left:-60px;width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,77,.22), transparent 70%);
+  pointer-events:none;
+}
+.corporate-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;position:relative;z-index:2;}
+.corporate h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px;}
+.corporate p{color:rgba(255,255,255,.85);margin-bottom:26px;max-width:520px;}
+.corporate-list{display:flex;flex-direction:column;gap:12px;margin-bottom:30px;}
+.corporate-list li{display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.92);font-size:.95rem;}
+.corporate-card{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:16px;
+  padding:30px;
+  backdrop-filter:blur(6px);
+}
+.corporate-card h4{font-size:.95rem;margin-bottom:16px;color:rgba(255,255,255,.9);}
+.corporate-card ul{display:flex;flex-direction:column;gap:10px;font-size:.88rem;color:rgba(255,255,255,.75);}
+
+.corporate-personas{
+  background:linear-gradient(135deg,var(--gold) 0%,#a3792f 100%);
+  color:#241a03;
+}
+.corporate-personas::before{background:radial-gradient(circle, rgba(255,255,255,.22), transparent 70%);}
+.corporate-personas::after{background:radial-gradient(circle, rgba(27,107,122,.2), transparent 70%);}
+.corporate-personas h2{color:#241a03;}
+.corporate-personas p{color:rgba(36,26,3,.82);}
+.corporate-personas .corporate-list li{color:rgba(36,26,3,.9);}
+.corporate-card-personas{
+  background:rgba(255,255,255,.35);
+  border-color:rgba(36,26,3,.15);
+}
+.corporate-card-personas h4{color:#241a03;}
+.corporate-card-personas ul{color:rgba(36,26,3,.8);}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step;position:relative;}
+.steps::before{
+  content:"";position:absolute;top:39px;left:12.5%;right:12.5%;height:2px;
+  background:repeating-linear-gradient(90deg, rgba(27,107,122,.35) 0 10px, transparent 10px 18px);
+}
+.step{
+  position:relative;padding:30px 24px 24px;border:1px solid #eceff2;border-radius:var(--radius);
+  background:#fff;transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.step:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(10,14,20,.08);}
+.step .step-num{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-light));color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;margin-bottom:20px;
+  box-shadow:0 10px 20px -6px rgba(27,107,122,.5);
+  position:relative;z-index:2;
+}
+.step:nth-child(2) .step-num{background:linear-gradient(135deg,#b8893c,var(--gold-light));box-shadow:0 10px 20px -6px rgba(184,137,60,.5);}
+.step:nth-child(3) .step-num{background:linear-gradient(135deg,#3f4f82,var(--indigo-light));box-shadow:0 10px 20px -6px rgba(63,79,130,.5);}
+.step:nth-child(4) .step-num{background:linear-gradient(135deg,#20262f,#454c5c);box-shadow:0 10px 20px -6px rgba(32,38,47,.5);}
+.step h3{font-size:1rem;margin-bottom:8px;}
+.step p{font-size:.88rem;color:var(--gray-700);}
+
+/* VEHICLE */
+.vehicle{background:var(--gray-100);}
+.vehicle-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.vehicle-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.vehicle-gallery .ph{grid-column:span 2;}
+.ph-box{
+  background:linear-gradient(155deg,#e5e8eb,#d7dbe0);
+  border-radius:14px;
+  aspect-ratio:16/10;
+  display:flex;align-items:center;justify-content:center;
+  border:1.5px dashed #b7bec6;
+  color:#6b7480;
+  text-align:center;
+  padding:18px;
+  transition:border-color .25s;
+}
+.ph-box:hover{border-color:var(--accent);}
+.ph-box .ph-t{font-weight:600;font-size:.85rem;margin-bottom:4px;}
+.ph-box .ph-s{font-size:.75rem;color:#8b93a0;}
+.photo-box{
+  background:#fff;
+  border-radius:14px;
+  aspect-ratio:16/10;
+  overflow:hidden;
+  border:1px solid #e2e6ea;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.photo-box:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(10,14,20,.1);}
+.photo-box img{width:100%;height:100%;object-fit:contain;}
+.vehicle-info .eyebrow{margin-bottom:14px;}
+.vehicle-info h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px;}
+.vehicle-info p{color:var(--gray-700);margin-bottom:22px;}
+.vehicle-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.tag{
+  background:#fff;border:1px solid #e2e6ea;padding:9px 16px;border-radius:999px;font-size:.85rem;color:var(--gray-700);font-weight:500;
+}
+
+/* QUOTE FORM */
+.quote{background:var(--black);color:#fff;}
+.quote .section-head h2{color:#fff;}
+.quote .section-head p{color:rgba(255,255,255,.6);}
+.quote-form{
+  background:var(--graphite);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:44px;
+}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.field{display:flex;flex-direction:column;gap:8px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:.85rem;color:rgba(255,255,255,.7);font-weight:500;}
+.field input,.field select,.field textarea{
+  background:var(--graphite-2);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  padding:13px 15px;
+  color:#fff;
+  font-size:.95rem;
+  font-family:inherit;
+  transition:border-color .2s,background .2s;
+}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.35);}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--accent-light);background:#232b35;
+}
+.field input.error,.field select.error{border-color:#e05c5c;}
+.field .err-msg{font-size:.78rem;color:#f08a8a;min-height:16px;}
+.form-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:30px;}
+.form-note{font-size:.8rem;color:rgba(255,255,255,.45);max-width:360px;}
+.form-success{
+  display:none;
+  background:rgba(46,160,90,.12);
+  border:1px solid rgba(46,160,90,.4);
+  color:#8fe0ab;
+  padding:16px 20px;
+  border-radius:12px;
+  margin-top:20px;
+  font-size:.9rem;
+}
+.form-success.show{display:block;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.contact-card{
+  border:1px solid #eceff2;border-radius:var(--radius);padding:28px 24px;text-align:left;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  background:#fff;
+}
+.contact-card:hover{border-color:transparent;box-shadow:0 20px 40px rgba(10,14,20,.1);transform:translateY(-6px);}
+.contact-card .service-icon{margin-bottom:16px;}
+.contact-card h3{font-size:.95rem;margin-bottom:6px;}
+.contact-card p{font-size:.88rem;color:var(--gray-700);}
+.contact-card a{color:var(--accent);font-weight:600;}
+.contact-card:nth-child(4n+1){--card-c1:#1b6b7a;--card-c2:#2a8fa3;}
+.contact-card:nth-child(4n+2){--card-c1:#b8893c;--card-c2:var(--gold-light);}
+.contact-card:nth-child(4n+3){--card-c1:#3f4f82;--card-c2:var(--indigo-light);}
+.contact-card:nth-child(4n+0){--card-c1:#20262f;--card-c2:#454c5c;}
+
+/* FOOTER */
+footer{background:var(--graphite);color:rgba(255,255,255,.65);padding:64px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+.footer-brand .logo{margin-bottom:16px;}
+.footer-brand p{font-size:.9rem;max-width:320px;color:rgba(255,255,255,.5);}
+.footer-col h4{color:#fff;font-size:.9rem;margin-bottom:18px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:.88rem;color:rgba(255,255,255,.55);transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:rgba(255,255,255,.4);
+}
+
+/* WHATSAPP FLOAT */
+.wa-float{
+  position:fixed;bottom:26px;right:26px;z-index:999;
+  width:60px;height:60px;border-radius:50%;
+  background:#22c35e;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(34,195,94,.4);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+  animation:pulse 2.6s infinite;
+}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 14px 32px rgba(34,195,94,.5);}
+@keyframes pulse{
+  0%{box-shadow:0 10px 26px rgba(34,195,94,.4),0 0 0 0 rgba(34,195,94,.4);}
+  70%{box-shadow:0 10px 26px rgba(34,195,94,.4),0 0 0 14px rgba(34,195,94,0);}
+  100%{box-shadow:0 10px 26px rgba(34,195,94,.4),0 0 0 0 rgba(34,195,94,0);}
+}
+
+/* TABS (Servicios / Empresas) */
+.tabs-shell{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start;}
+.tabs-nav{display:flex;flex-direction:column;gap:10px;position:sticky;top:110px;}
+.tab-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:15px 16px;border-radius:12px;
+  border:1px solid #eceff2;background:#fff;cursor:pointer;
+  text-align:left;transition:all .25s var(--ease);
+  font-family:inherit;font-size:.88rem;font-weight:600;color:var(--black);
+  width:100%;
+}
+.tab-btn .tab-icon{
+  width:36px;height:36px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(135deg,var(--card-c1,var(--accent)),var(--card-c2,var(--accent-light)));
+}
+.tab-btn .tab-icon svg{width:17px;height:17px;}
+.tab-btn:hover{border-color:var(--card-c1,var(--accent));transform:translateX(4px);}
+.tab-btn.active{
+  border-color:transparent;
+  background:linear-gradient(135deg,var(--card-c1,var(--accent)),var(--card-c2,var(--accent-light)));
+  color:#fff;box-shadow:0 14px 28px -10px var(--card-c1,var(--accent));
+}
+.tab-btn:nth-child(4n+1){--card-c1:#1b6b7a;--card-c2:#2a8fa3;}
+.tab-btn:nth-child(4n+2){--card-c1:#b8893c;--card-c2:var(--gold-light);}
+.tab-btn:nth-child(4n+3){--card-c1:#3f4f82;--card-c2:var(--indigo-light);}
+.tab-btn:nth-child(4n+0){--card-c1:#20262f;--card-c2:#454c5c;}
+
+.tab-panel{display:none;background:#fff;border:1px solid #eceff2;border-radius:20px;padding:40px;}
+.tab-panel.active{display:block;animation:fadeInUp .4s var(--ease);}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.tab-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:8px;}
+.tab-panel h3{font-size:1.5rem;}
+.tab-panel .lead{color:var(--gray-700);font-size:1rem;margin-bottom:26px;}
+.tab-specs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+.tab-specs span{
+  background:var(--gray-100);border-radius:999px;padding:8px 14px;font-size:.78rem;font-weight:600;color:var(--gray-700);
+  display:flex;align-items:center;gap:6px;
+}
+.tab-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:24px;}
+.tab-detail-grid h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:12px;}
+.tab-detail-grid ul{display:flex;flex-direction:column;gap:9px;}
+.tab-detail-grid li{font-size:.9rem;color:var(--gray-700);display:flex;gap:8px;align-items:flex-start;}
+.tab-detail-grid li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0;}
+.tab-note{
+  background:var(--gray-100);border-radius:12px;padding:16px 20px;font-size:.85rem;color:var(--gray-700);margin-bottom:24px;
+  border-left:3px solid var(--gold);
+}
+
+/* CALCULATOR / FORECAST */
+.calc-section{background:var(--black);color:#fff;position:relative;overflow:hidden;}
+.calc-section::before{
+  content:"";position:absolute;top:-100px;left:-80px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle, rgba(42,143,163,.25), transparent 70%);pointer-events:none;
+}
+.calc-section::after{
+  content:"";position:absolute;bottom:-120px;right:-100px;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,77,.16), transparent 70%);pointer-events:none;
+}
+.calc-section .section-head h2{color:#fff;}
+.calc-section .section-head p{color:rgba(255,255,255,.6);}
+.formula-box{
+  position:relative;z-index:2;background:var(--graphite);border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;padding:24px 28px;margin-bottom:36px;
+}
+.formula-box h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-light);margin-bottom:14px;}
+.formula-box ol{display:flex;flex-direction:column;gap:8px;padding-left:20px;}
+.formula-box li{font-size:.88rem;color:rgba(255,255,255,.78);}
+.formula-box code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px;font-size:.85em;color:#fff;}
+.calc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;position:relative;z-index:2;align-items:start;}
+.calc-card{background:var(--graphite);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;}
+.calc-card h4{font-size:.95rem;margin-bottom:20px;color:#fff;}
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.calc-checkbox{display:flex;align-items:center;gap:10px;margin:4px 0 18px;}
+.calc-checkbox input{width:18px;height:18px;accent-color:var(--accent-light);}
+.calc-checkbox label{font-size:.88rem;color:rgba(255,255,255,.75);}
+.maps-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;
+  padding:11px 18px;border-radius:999px;font-size:.82rem;font-weight:600;cursor:pointer;
+  transition:.25s var(--ease);width:100%;justify-content:center;margin-top:6px;
+}
+.maps-btn:hover{background:rgba(255,255,255,.08);border-color:#fff;}
+.maps-btn svg{width:16px;height:16px;}
+.calc-result{background:linear-gradient(150deg,var(--accent) 0%,#123f49 100%);border-radius:20px;padding:32px;position:sticky;top:110px;}
+.calc-result .r-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.7);}
+.calc-result .price{font-family:'Playfair Display',serif;font-weight:800;font-size:2.4rem;margin:8px 0 20px;line-height:1.1;}
+.calc-breakdown{display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25);}
+.calc-breakdown div{display:flex;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.85);}
+.calc-breakdown .total{font-weight:700;font-size:.95rem;color:#fff;padding-top:10px;border-top:1px dashed rgba(255,255,255,.3);margin-top:4px;}
+.calc-badge-note{
+  margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);
+  font-size:.78rem;color:rgba(255,255,255,.65);
+}
+.forecast-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;}
+.forecast-list li{
+  display:flex;gap:14px;align-items:flex-start;font-size:.92rem;color:rgba(255,255,255,.75);
+  background:var(--graphite);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px 18px;
+}
+.forecast-list li .fnum{
+  width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:#241a03;font-weight:700;font-size:.78rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:50px;}
+  .hero-visual{max-width:440px;margin:0 auto;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+  .corporate-inner{grid-template-columns:1fr;}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .steps::before{display:none;}
+  .vehicle-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .tabs-shell{grid-template-columns:1fr;}
+  .tabs-nav{position:static;flex-direction:row;flex-wrap:wrap;}
+  .tab-btn{width:auto;flex:1 1 220px;}
+  .calc-grid{grid-template-columns:1fr;}
+  .calc-result{position:static;}
+}
+@media(max-width:1180px){
+  nav.links{display:none;}
+  .menu-toggle{display:flex;}
+}
+@media(max-width:768px){
+  section{padding:70px 0;}
+  .services-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .why-item-ethics{flex-direction:column;text-align:center;}
+  .why-item-ethics .num{margin-bottom:14px;}
+  .promise-banner{padding:28px 22px;}
+  .steps{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;gap:30px;}
+  .form-grid{grid-template-columns:1fr;}
+  .corporate{padding:44px 26px;margin:0 16px;}
+  .hero-actions .btn{flex:1;}
+  .nav-cta .btn span{display:none;}
+  .tab-detail-grid{grid-template-columns:1fr;}
+  .tab-panel{padding:26px;}
+  .calc-row{grid-template-columns:1fr;}
+  .calc-card,.calc-result{padding:24px;}
+}
+@media(max-width:480px){
+  .container{padding:0 18px;}
+  .hero-stats{gap:24px;}
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#top" class="logo"><span class="logo-mark">MB</span> MB Movilidad</a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#por-que-elegirnos">Por qué elegirnos</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#personas">Personas</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#calculadora">Tarifas</a>
+      <a href="#planeacion">Planeación</a>
+      <a href="#vehiculo">Vehículo</a>
+      <a href="#cotizacion">Cotización</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#cotizacion" class="btn btn-primary">Cotizar</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" style="position:fixed;inset:0;background:rgba(10,14,20,.98);z-index:1500;display:none;flex-direction:column;align-items:center;justify-content:center;gap:30px;">
+  <a href="#servicios" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Servicios</a>
+  <a href="#por-que-elegirnos" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Por qué elegirnos</a>
+  <a href="#empresas" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Empresas</a>
+  <a href="#personas" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Personas</a>
+  <a href="#como-funciona" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Cómo funciona</a>
+  <a href="#calculadora" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Tarifas</a>
+  <a href="#planeacion" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Planeación</a>
+  <a href="#vehiculo" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Vehículo</a>
+  <a href="#cotizacion" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Cotización</a>
+  <a href="#contacto" class="mm-link" style="color:#fff;font-size:1.3rem;font-weight:600;">Contacto</a>
+  <a href="#cotizacion" class="btn btn-primary mm-link">Solicitar cotización</a>
+  <button id="menuClose" style="position:absolute;top:26px;right:26px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">&times;</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Movilidad de alto estándar en Colombia</span>
+      <h1>Lo llevamos con <span>puntualidad</span>,<br>ya sea en representación de su organización o de forma particular.</h1>
+      <p>Desde el traslado diario a su lugar de trabajo hasta el viaje familiar de fin de semana: una misma solución de movilidad, seria y de tarifas claras, pensada tanto para organizaciones como para personas.</p>
+      <div class="audience-toggle">
+        <a href="#empresas" class="audience-btn">
+          <span class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="9" height="18"/><rect x="13" y="8" width="7" height="13"/></svg></span>
+          <span>Represento a una organización</span>
+        </a>
+        <a href="#personas" class="audience-btn">
+          <span class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span>Viaje personal o familiar</span>
+        </a>
+      </div>
+      <div class="hero-actions">
+        <a href="#cotizacion" class="btn btn-primary">Solicitar cotización <span class="arrow">→</span></a>
+        <a href="https://wa.me/573006068984?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20transporte" target="_blank" rel="noopener" class="btn btn-outline">Hablar por WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>Placa blanca</strong><span>Servicio público habilitado</span></div>
+        <div><strong>100%</strong><span>Atención directa y personalizada</span></div>
+        <div><strong>A su medida</strong><span>Para organizaciones, familias y personas</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <span class="hero-chip"><span class="dot"></span> Renault Logan 2027</span>
+      <img src="images/1.jpg" alt="Renault Logan blanco, modelo 2027, vista frontal" style="width:100%;height:100%;object-fit:contain;background:#fff;">
+      <span class="hero-badge-price">Placa blanca · Uso particular y empresarial</span>
+    </div>
+  </div>
+</section>
+
+<!-- BARRA DE CONFIANZA -->
+<div class="trust-bar">
+  <div class="trust-track">
+    <span>Transporte empresarial</span>
+    <span>Viajes personales y familiares</span>
+    <span>Placa blanca · Servicio público</span>
+    <span>Atención directa</span>
+    <span>Puntualidad como prioridad</span>
+    <span>Sujeto a disponibilidad</span>
+    <span>Transporte empresarial</span>
+    <span>Viajes personales y familiares</span>
+    <span>Placa blanca · Servicio público</span>
+    <span>Atención directa</span>
+    <span>Puntualidad como prioridad</span>
+    <span>Sujeto a disponibilidad</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Servicios</span>
+      <h2>Soluciones de movilidad para su organización</h2>
+      <p>Seleccione un servicio para ver el detalle completo: qué incluye, para quién es ideal y qué condiciones aplican.</p>
+      <a href="#cotizacion" class="btn btn-primary" style="margin-top:20px;">Solicitar cotización <span class="arrow">→</span></a>
+    </div>
+    <div class="tabs-shell reveal">
+      <div class="tabs-nav" id="serviceTabsNav" role="tablist">
+        <button class="tab-btn active" data-target="svc-1" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="9" height="18"/><rect x="13" y="8" width="7" height="13"/></svg></span>
+          Transporte empresarial
+        </button>
+        <button class="tab-btn" data-target="svc-2" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+          Colaboradores
+        </button>
+        <button class="tab-btn" data-target="svc-3" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+          Traslados corporativos
+        </button>
+        <button class="tab-btn" data-target="svc-4" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          Servicios programados
+        </button>
+        <button class="tab-btn" data-target="svc-5" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          Aeropuerto · Hotel
+        </button>
+        <button class="tab-btn" data-target="svc-6" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></span>
+          Reuniones y eventos
+        </button>
+        <button class="tab-btn" data-target="svc-7" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          Servicios contratados
+        </button>
+        <button class="tab-btn" data-target="svc-8" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+          Soluciones a medida
+        </button>
+      </div>
+
+      <div class="tabs-panels">
+        <div class="tab-panel active" id="svc-1">
+          <div class="tab-panel-head"><h3>Transporte empresarial</h3></div>
+          <p class="lead">Traslados diseñados para los requerimientos de movilidad diaria de su compañía: ejecutivos, visitas o desplazamientos puntuales dentro de la ciudad.</p>
+          <div class="tab-specs">
+            <span>🚗 Hasta 4 pasajeros</span>
+            <span>🏳️ Placa blanca</span>
+            <span>📍 Servicio dentro de la ciudad</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Vehículo Renault Logan 2027 asignado al servicio</li>
+                <li>Conductor identificado y comunicación directa antes del traslado</li>
+                <li>Confirmación previa de ruta, hora y punto de encuentro</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Ejecutivos con desplazamientos frecuentes</li>
+                <li>Visitas de clientes o proveedores</li>
+                <li>Traslados puntuales dentro del horario laboral</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Servicio sujeto a disponibilidad del vehículo. Se recomienda solicitar con al menos 24 horas de anticipación para garantizar el horario.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Transporte empresarial">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-2">
+          <div class="tab-panel-head"><h3>Transporte para colaboradores</h3></div>
+          <p class="lead">Movilidad segura y puntual para el personal de su organización, con la posibilidad de coordinar rutas fijas por turno.</p>
+          <div class="tab-specs">
+            <span>🚗 Hasta 4 colaboradores por viaje</span>
+            <span>⏰ Turnos mañana / tarde</span>
+            <span>📍 Puntos de recogida acordados</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Recogida y entrega en puntos previamente acordados</li>
+                <li>Posibilidad de ruta fija por turno (mañana o tarde)</li>
+                <li>Reporte de novedades del servicio a la empresa</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Empresas cuyo personal requiere transporte a oficina o planta</li>
+                <li>Turnos con horarios fijos y recurrentes</li>
+                <li>Grupos de hasta 4 colaboradores por viaje</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Al operar con un solo vehículo, la frecuencia y el número de rutas simultáneas están sujetos a disponibilidad y se coordinan previamente con su organización.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Transporte para colaboradores">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-3">
+          <div class="tab-panel-head"><h3>Traslados corporativos</h3></div>
+          <p class="lead">Desplazamientos punto a punto entre sedes, oficinas o reuniones de negocio, con tiempos coordinados de espera si el servicio lo requiere.</p>
+          <div class="tab-specs">
+            <span>🏢 Entre sedes u oficinas</span>
+            <span>⏱ Espera coordinada</span>
+            <span>🚗 Hasta 4 pasajeros</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Traslado directo entre las direcciones acordadas</li>
+                <li>Tiempo de espera coordinado previamente si la reunión lo requiere</li>
+                <li>Comunicación directa para ajustes de última hora</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Reuniones entre sedes de la misma empresa</li>
+                <li>Visitas a clientes o proveedores</li>
+                <li>Desplazamientos de equipos de trabajo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">El tiempo de espera adicional al punto de destino debe acordarse previamente; puede generar un costo adicional según la duración.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Traslado corporativo">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-4">
+          <div class="tab-panel-head"><h3>Servicios programados</h3></div>
+          <p class="lead">Coordinación de rutas y horarios recurrentes (diarios, semanales o quincenales) para empresas con necesidades de movilidad constantes.</p>
+          <div class="tab-specs">
+            <span>📅 Frecuencia a definir</span>
+            <span>☎️ Un solo punto de contacto</span>
+            <span>🔁 Recurrente</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Definición conjunta de horario y frecuencia del servicio</li>
+                <li>Un único punto de contacto para coordinar cambios</li>
+                <li>Tarifa calculada según distancia y frecuencia acordada</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Empresas con rutas fijas recurrentes</li>
+                <li>Necesidades de movilidad semanales o mensuales</li>
+                <li>Clientes que buscan simplificar la coordinación</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Sujeto a disponibilidad del vehículo. Los cambios de última hora quedan sujetos a confirmación previa.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Servicio programado">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-5">
+          <div class="tab-panel-head"><h3>Aeropuerto – empresa – hotel</h3></div>
+          <p class="lead">Traslados coordinados entre el aeropuerto, tus oficinas y el hospedaje de tus equipos o visitantes.</p>
+          <div class="tab-specs">
+            <span>✈️ Según horario de vuelo</span>
+            <span>🛎 Punto de encuentro claro</span>
+            <span>🚗 Hasta 4 pasajeros y equipaje de mano</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Coordinación de horario según el vuelo del pasajero</li>
+                <li>Punto de encuentro claro y comunicación previa</li>
+                <li>Seguimiento del servicio hasta su finalización</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Visitantes y delegaciones de negocio</li>
+                <li>Ejecutivos en viaje corporativo</li>
+                <li>Traslados de llegada o salida programados</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Se recomienda confirmar el horario de vuelo con anticipación. Los tiempos de traslado están sujetos a tráfico y condiciones de vía.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Aeropuerto – empresa – hotel">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-6">
+          <div class="tab-panel-head"><h3>Reuniones y eventos</h3></div>
+          <p class="lead">Transporte para asistentes o material a reuniones, capacitaciones y eventos empresariales puntuales.</p>
+          <div class="tab-specs">
+            <span>🎤 Eventos puntuales</span>
+            <span>📆 Coordinación previa de agenda</span>
+            <span>🚗 Hasta 4 pasajeros</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Traslado de asistentes o material a la dirección del evento</li>
+                <li>Coordinación previa de horarios y direcciones</li>
+                <li>Confirmación del servicio antes de la fecha del evento</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Eventos corporativos y lanzamientos</li>
+                <li>Capacitaciones fuera de la oficina</li>
+                <li>Actividades empresariales puntuales</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Disponibilidad sujeta a la agenda del vehículo; se recomienda reservar con anticipación cuando el evento tiene fecha fija.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Reunión o evento empresarial">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-7">
+          <div class="tab-panel-head"><h3>Servicios contratados</h3></div>
+          <p class="lead">Traslados previamente acordados y confirmados con su organización, ideales para dejar cerrado un servicio con anticipación.</p>
+          <div class="tab-specs">
+            <span>📝 Acuerdo previo</span>
+            <span>💬 Confirmación por WhatsApp o escrito</span>
+            <span>🚗 Hasta 4 pasajeros</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Acuerdo previo del alcance, tarifa y condiciones del servicio</li>
+                <li>Confirmación por WhatsApp u otro medio escrito</li>
+                <li>Seguimiento del servicio el día acordado</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Empresas que planifican sus traslados con anticipación</li>
+                <li>Servicios ya cotizados que solo requieren confirmación</li>
+                <li>Clientes recurrentes con condiciones ya definidas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Cualquier cambio al servicio ya contratado (fecha, ruta u horario) requiere nueva coordinación previa.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Otro">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+
+        <div class="tab-panel" id="svc-8">
+          <div class="tab-panel-head"><h3>Soluciones de movilidad a medida</h3></div>
+          <p class="lead">Acompañamiento para definir la mejor alternativa de transporte según un requerimiento puntual de su organización que no encaje en los servicios anteriores.</p>
+          <div class="tab-specs">
+            <span>🧭 A medida</span>
+            <span>🤝 Asesoría directa</span>
+            <span>🚗 Hasta 4 pasajeros</span>
+          </div>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Análisis de la necesidad puntual de movilidad</li>
+                <li>Propuesta de la alternativa más adecuada dentro de lo permitido por la normativa</li>
+                <li>Cotización personalizada del servicio</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Necesidades particulares no cubiertas en los demás servicios</li>
+                <li>Empresas que buscan una solución flexible</li>
+                <li>Casos que requieren evaluación previa</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Todas las soluciones quedan sujetas a disponibilidad del vehículo y a las condiciones aplicables según la normativa de transporte vigente en Colombia.</div>
+          <a href="#cotizacion" class="btn btn-primary tab-quote-btn" data-service="Otro">Cotizar este servicio <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="why" id="por-que-elegirnos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por qué elegirnos</span>
+      <h2>Un servicio pensado para la tranquilidad de su organización</h2>
+      <p>Cada detalle está pensado para que la movilidad deje de ser una preocupación para su compañía.</p>
+      <a href="#cotizacion" class="btn btn-primary" style="margin-top:20px;">Solicitar cotización <span class="arrow">→</span></a>
+    </div>
+
+    <div class="promise-banner reveal">
+      <span class="eyebrow" style="color:var(--gold-light);">Nuestra promesa de valor</span>
+      <p class="promise-slogan">"Movilidad que cumple su palabra."</p>
+      <p class="promise-text">En MB Movilidad creemos que la confianza se construye con hechos, no con promesas vacías: horarios cumplidos, tarifas claras desde el primer momento y comunicación honesta en cada servicio. Ya sea el traslado diario de su organización o el viaje familiar de fin de semana, trabajamos con un compromiso simple: ser puntuales, ser transparentes y tratar cada viaje con la misma seriedad, sin importar quién viaje.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Puntualidad</h3>
+        <p>Coordinamos cada traslado con anticipación para cumplir los horarios acordados.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-6-6 6 6 0 0 0-6 6c0 7-3 9-3 9h18s-3-2-3-9"/></svg></div>
+        <h3>Atención personalizada</h3>
+        <p>Comunicación directa contigo, sin intermediarios ni procesos complicados.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+        <h3>Seguridad</h3>
+        <p>Vehículo de servicio público con placa blanca, conducido con responsabilidad.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Disponibilidad programada</h3>
+        <p>Servicios recurrentes o puntuales, sujeto a disponibilidad y condiciones aplicables.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="7" height="18"/><rect x="13" y="8" width="7" height="13"/></svg></div>
+        <h3>Compromiso serio</h3>
+        <p>Ya sea un servicio empresarial o un viaje personal, lo tratamos con la misma seriedad: nada de transporte informal.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Comunicación directa</h3>
+        <p>Coordinación clara antes, durante y después de cada servicio.</p>
+      </div>
+      <div class="why-item why-item-ethics reveal">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+        <h3>Transparencia y ética</h3>
+        <p>Tarifas claras y sin cobros ocultos, cumpliendo la normativa de transporte vigente en Colombia. Así construimos una relación de confianza a largo plazo, seas una empresa, una familia o una persona particular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA EMPRESAS -->
+<section id="empresas">
+  <div class="container">
+    <div class="corporate reveal">
+      <div class="corporate-inner">
+        <div>
+          <span class="eyebrow" style="color:#dff3f6;">Para empresas</span>
+          <h2>Un aliado de movilidad para su compañía</h2>
+          <p>Trabajamos con organizaciones mediante servicios programados y acuerdos adaptados a los requerimientos de movilidad de su equipo, con la seriedad que un cliente corporativo requiere.</p>
+          <ul class="corporate-list">
+            <li>✓ Servicios programados según la frecuencia que su organización necesite.</li>
+            <li>✓ Coordinación directa con un único punto de contacto.</li>
+            <li>✓ Acuerdos adaptados a su operación, sujeto a disponibilidad y condiciones aplicables.</li>
+          </ul>
+          <a href="#cotizacion" class="btn btn-dark" style="background:#fff;color:var(--accent);">Solicitar propuesta empresarial <span class="arrow">→</span></a>
+        </div>
+        <div class="corporate-card">
+          <h4>Ideal para</h4>
+          <ul>
+            <li>🏢 Empresas con desplazamientos frecuentes de personal</li>
+            <li>📆 Rutas fijas o programadas</li>
+            <li>🤝 Traslado de visitantes y clientes</li>
+            <li>🎯 Eventos o actividades corporativas puntuales</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs-shell reveal" style="margin-top:40px;">
+      <div class="tabs-nav" id="corpTabsNav" role="tablist">
+        <button class="tab-btn active" data-target="corp-1" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+          Colaboradores
+        </button>
+        <button class="tab-btn" data-target="corp-2" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          Programados y contratos
+        </button>
+        <button class="tab-btn" data-target="corp-3" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></span>
+          Eventos corporativos
+        </button>
+        <button class="tab-btn" data-target="corp-4" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+          Visitantes y clientes
+        </button>
+      </div>
+
+      <div class="tabs-panels">
+        <div class="tab-panel active" id="corp-1">
+          <h3>Transporte de colaboradores</h3>
+          <p class="lead">Movilidad organizada para el personal de su empresa, con rutas y horarios definidos junto a un único responsable de la operación.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Definición de puntos de recogida y entrega fijos</li>
+                <li>Coordinación de turnos (mañana, tarde o el horario que definas)</li>
+                <li>Comunicación directa ante cualquier novedad del servicio</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Empresas con personal en horarios fijos</li>
+                <li>Grupos de hasta 4 colaboradores por viaje</li>
+                <li>Rutas cortas dentro de la ciudad</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Al contar con un solo vehículo, la cantidad de rutas simultáneas está sujeta a disponibilidad; para necesidades mayores evaluamos ampliar la operación.</div>
+        </div>
+
+        <div class="tab-panel" id="corp-2">
+          <h3>Servicios programados y contratos</h3>
+          <p class="lead">Acuerdos con su empresa para servicios recurrentes, con condiciones y tarifas definidas previamente.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Acuerdo de frecuencia (diaria, semanal o el ciclo que definan)</li>
+                <li>Tarifa calculada según distancia y frecuencia acordada</li>
+                <li>Un único punto de contacto para toda la coordinación</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Empresas que buscan simplificar la gestión del transporte</li>
+                <li>Operación recurrente con necesidades estables</li>
+                <li>Clientes que prefieren condiciones cerradas por adelantado</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Las condiciones de facturación y pago se acuerdan directamente con su empresa según cada caso.</div>
+        </div>
+
+        <div class="tab-panel" id="corp-3">
+          <h3>Eventos y actividades corporativas</h3>
+          <p class="lead">Apoyo de transporte para actividades puntuales de su empresa: lanzamientos, capacitaciones o reuniones ampliadas.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Coordinación previa de horarios y direcciones del evento</li>
+                <li>Confirmación del servicio antes de la fecha</li>
+                <li>Seguimiento durante el desarrollo del evento</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Eventos corporativos con fecha definida</li>
+                <li>Capacitaciones fuera de las instalaciones</li>
+                <li>Actividades que requieren varios traslados el mismo día</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Recomendamos reservar con anticipación cuando el evento tiene una fecha fija, especialmente si requiere varios traslados.</div>
+        </div>
+
+        <div class="tab-panel" id="corp-4">
+          <h3>Traslado de visitantes y clientes</h3>
+          <p class="lead">Una experiencia de transporte cuidada para las personas que representan a su empresa frente a terceros: visitantes, clientes o proveedores.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Punto de encuentro claro y puntual</li>
+                <li>Atención directa y comunicación previa con quien coordina la visita</li>
+                <li>Traslado según la agenda acordada (aeropuerto, oficina, hotel)</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Visitas de clientes o socios de negocio</li>
+                <li>Delegaciones o invitados especiales</li>
+                <li>Momentos donde la primera impresión importa</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Servicio sujeto a disponibilidad y condiciones aplicables; se recomienda coordinar la agenda completa con anticipación.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA PERSONAS Y FAMILIAS -->
+<section id="personas">
+  <div class="container">
+    <div class="corporate reveal corporate-personas">
+      <div class="corporate-inner">
+        <div>
+          <span class="eyebrow" style="color:#3a2c05;">Para usted y su familia</span>
+          <h2>Movilidad de confianza para su día a día</h2>
+          <p>No solo trabajamos con organizaciones: también lo llevamos a usted, sea en el trayecto de todos los días o en ese viaje que lleva tiempo planeando con su familia.</p>
+          <ul class="corporate-list">
+            <li>✓ Traslados puntuales al trabajo, al estudio o a sus citas.</li>
+            <li>✓ Viajes fuera de la ciudad con espacio para toda la familia.</li>
+            <li>✓ El mismo trato serio y puntual que le damos a nuestros clientes empresariales.</li>
+          </ul>
+          <a href="#cotizacion" class="btn btn-dark" style="background:#1a1305;color:var(--gold-light);">Solicitar mi viaje <span class="arrow">→</span></a>
+        </div>
+        <div class="corporate-card corporate-card-personas">
+          <h4>Ideal para</h4>
+          <ul>
+            <li>🚗 Traslado diario al trabajo o al estudio</li>
+            <li>🏖️ Viajes a Melgar, fincas o municipios cercanos</li>
+            <li>👨‍👩‍👧 Paseos familiares o salidas de fin de semana</li>
+            <li>✈️ Recogida o entrega en el aeropuerto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs-shell reveal" style="margin-top:40px;">
+      <div class="tabs-nav" id="personasTabsNav" role="tablist">
+        <button class="tab-btn active" data-target="pers-1" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          Trabajo y estudio
+        </button>
+        <button class="tab-btn" data-target="pers-2" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          Viajes fuera de la ciudad
+        </button>
+        <button class="tab-btn" data-target="pers-3" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Paseos familiares
+        </button>
+        <button class="tab-btn" data-target="pers-4" role="tab">
+          <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 19h19M4 19V9l8-6 8 6v10"/></svg></span>
+          Aeropuerto personal
+        </button>
+      </div>
+
+      <div class="tabs-panels">
+        <div class="tab-panel active" id="pers-1">
+          <h3>Traslado al trabajo o al estudio</h3>
+          <p class="lead">Si prefiere no depender del transporte público o de solicitar un vehículo distinto cada día, coordinamos un servicio fijo para sus trayectos habituales.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Horario y ruta acordados según su rutina</li>
+                <li>Recogida en el punto que definas</li>
+                <li>Comunicación directa si hay algún cambio</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Personas con horarios fijos de trabajo o estudio</li>
+                <li>Quienes prefieren no depender de aplicaciones distintas cada día</li>
+                <li>Trayectos recurrentes dentro de la ciudad</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">La frecuencia se acuerda contigo directamente; sujeta a disponibilidad del vehículo.</div>
+        </div>
+
+        <div class="tab-panel" id="pers-2">
+          <h3>Viajes fuera de la ciudad</h3>
+          <p class="lead">Lo llevamos a Melgar, a la finca o a cualquier municipio cercano, con espacio cómodo para hasta 4 personas y su equipaje.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Coordinación previa de fecha, hora y punto de encuentro</li>
+                <li>Espacio para equipaje según lo acordado</li>
+                <li>Comunicación directa durante todo el trayecto</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Escapadas de fin de semana</li>
+                <li>Viajes a fincas o municipios cercanos</li>
+                <li>Grupos de hasta 4 personas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Para viajes fuera de la ciudad recomendamos coordinar con anticipación, especialmente en temporada alta.</div>
+        </div>
+
+        <div class="tab-panel" id="pers-3">
+          <h3>Paseos y salidas familiares</h3>
+          <p class="lead">Cumpleaños, reuniones familiares, salidas al centro comercial o cualquier plan que implique movilizarse en grupo y con tranquilidad.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Un solo vehículo para toda la familia (hasta 4 personas)</li>
+                <li>Punto de recogida y regreso acordados</li>
+                <li>Trato cercano y respetuoso con niños y adultos mayores</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Familias que prefieren no manejar en el plan</li>
+                <li>Salidas con niños o personas mayores</li>
+                <li>Planes puntuales de medio día o el día completo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Indíquenos si el plan incluye varias paradas para coordinar el servicio de la mejor forma.</div>
+        </div>
+
+        <div class="tab-panel" id="pers-4">
+          <h3>Aeropuerto personal</h3>
+          <p class="lead">Lo recogemos o lo llevamos al aeropuerto con la debida anticipación, calculando el tiempo según su vuelo.</p>
+          <div class="tab-detail-grid">
+            <div>
+              <h4>Qué incluye</h4>
+              <ul>
+                <li>Coordinación de horario según su vuelo</li>
+                <li>Punto de encuentro claro dentro o fuera del aeropuerto</li>
+                <li>Espacio para maletas de viaje</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <ul>
+                <li>Viajeros frecuentes</li>
+                <li>Salidas o llegadas en horarios difíciles de cubrir</li>
+                <li>Quienes prefieren evitar el estrés de coordinar todo a último momento</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-note">Se recomienda confirmar el horario de vuelo con anticipación; los tiempos están sujetos a tráfico y condiciones de vía.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Proceso</span>
+      <h2>Cómo funciona</h2>
+      <p>Un proceso simple y directo, sin complicaciones.</p>
+      <a href="#cotizacion" class="btn btn-primary" style="margin-top:20px;">Solicitar cotización <span class="arrow">→</span></a>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Indíquenos su requerimiento</h3>
+        <p>Escríbanos con los detalles del servicio de transporte que necesita.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Analizamos el servicio</h3>
+        <p>Revisamos disponibilidad, ruta y condiciones aplicables.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Recibe una cotización</h3>
+        <p>Le enviamos una propuesta clara antes de confirmar.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Coordinamos el traslado</h3>
+        <p>Confirmamos fecha, hora y detalles finales del servicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFAS (enfoque cliente) -->
+<section class="calc-section" id="calculadora">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--gold-light);">Tarifas</span>
+      <h2>Tarifas simples, sin sorpresas</h2>
+      <p>Un mismo precio justo por trayecto, sin importar si viaja solo. Y si van varias personas en el mismo servicio —sus compañeros de trabajo o su familia— ese costo se reparte entre todos, así cada uno paga menos.</p>
+      <a href="#cotizacion" class="btn btn-primary" style="margin-top:20px;">Solicitar cotización <span class="arrow">→</span></a>
+    </div>
+
+    <div class="calc-grid" style="grid-template-columns:repeat(2,1fr);">
+      <div class="calc-card reveal" style="text-align:center;">
+        <div class="service-icon" style="margin:0 auto 18px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h4 style="text-align:center;">Trayectos cortos</h4>
+        <p style="color:rgba(255,255,255,.6);font-size:.9rem;">Tarifa fija para desplazamientos cercanos dentro de la ciudad, sin costos ocultos.</p>
+      </div>
+      <div class="calc-card reveal" style="text-align:center;border-color:var(--gold-light);">
+        <div class="service-icon" style="margin:0 auto 18px;background:linear-gradient(135deg,var(--gold),var(--gold-light));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        </div>
+        <h4 style="text-align:center;">Trayectos más largos</h4>
+        <p style="color:rgba(255,255,255,.6);font-size:.9rem;">Tarifa calculada según los kilómetros recorridos, siempre calculada de forma clara y proporcional a la ruta.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:36px;position:relative;z-index:2;">
+      <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:12px 22px;margin-bottom:22px;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--gold-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span style="font-size:.88rem;color:#fff;font-weight:600;">Viajando acompañado —en equipo o en familia— el mismo servicio se paga entre todos: menos costo por persona.</span>
+      </div>
+      <p style="color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 24px;">La tarifa exacta depende del origen y el destino. Indíquenos su ruta y le enviamos una cotización clara por WhatsApp, sin compromiso.</p>
+      <a href="#cotizacion" class="btn btn-primary">Solicitar cotización <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANEACIÓN DE RUTAS (enfoque cliente) -->
+<section id="planeacion" style="background:var(--gray-100);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Planeación</span>
+      <h2>Coordinamos tus rutas con anticipación</h2>
+      <p>Si ya sabe cuándo y hacia dónde va a movilizarse —sea la operación de su empresa o un viaje personal o familiar— planeamos el servicio con usted para que sea puntual y sin imprevistos.</p>
+      <a href="#cotizacion" class="btn btn-dark" style="margin-top:20px;">Indíquenos su requerimiento <span class="arrow">→</span></a>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Rutas recurrentes</h3>
+        <p>Si siempre se moviliza por las mismas rutas —para trabajar o para su empresa— las dejamos programadas para que no tenga que solicitar cada servicio por separado.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Horarios definidos</h3>
+        <p>Acordamos contigo los horarios exactos de recogida y entrega, para que la puntualidad no dependa de coordinar cada vez.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Un solo contacto</h3>
+        <p>Toda la coordinación de sus servicios queda centralizada con una sola persona, para simplificar la comunicación, sea para su empresa o para usted.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:40px;">
+      <a href="#cotizacion" class="btn btn-dark">Indíquenos su requerimiento <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- VEHÍCULO -->
+<section class="vehicle" id="vehiculo">
+  <div class="container">
+    <div class="vehicle-grid">
+      <div class="vehicle-gallery">
+        <div class="photo-box"><img src="images/1.jpg" alt="Renault Logan blanco 2027, vista frontal"></div>
+        <div class="photo-box"><img src="images/3.jpg" alt="Renault Logan blanco 2027, vista lateral"></div>
+        <div class="photo-box ph"><img src="images/2.jpg" alt="Renault Logan blanco 2027, vista trasera"></div>
+      </div>
+      <div class="vehicle-info reveal">
+        <span class="eyebrow">Nuestro vehículo</span>
+        <h2>Renault Logan 2027 · Blanco</h2>
+        <p>Contamos con un Renault Logan modelo 2027, color blanco, habilitado para servicio público (placa blanca) y destinado al transporte empresarial. A medida que crecemos, buscamos ampliar nuestra flota para atender más servicios simultáneos.</p>
+        <div class="vehicle-tags">
+          <span class="tag">Modelo 2027</span>
+          <span class="tag">Color blanco</span>
+          <span class="tag">Placa blanca</span>
+          <span class="tag">Servicio público</span>
+          <span class="tag">Uso empresarial</span>
+        </div>
+        <a href="#cotizacion" class="btn btn-primary" style="margin-top:26px;">Solicitar cotización <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COTIZACIÓN -->
+<section class="quote" id="cotizacion">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cotización</span>
+      <h2>Solicite su cotización</h2>
+      <p>Complete el formulario y le enviaremos la información por WhatsApp.</p>
+    </div>
+    <form class="quote-form reveal" id="quoteForm" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="q-nombre">Nombre *</label>
+          <input type="text" id="q-nombre" name="nombre" placeholder="Su nombre completo" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-empresa">Empresa</label>
+          <input type="text" id="q-empresa" name="empresa" placeholder="Nombre de su empresa">
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-telefono">Teléfono *</label>
+          <input type="tel" id="q-telefono" name="telefono" placeholder="Ej. 300 000 0000" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-correo">Correo</label>
+          <input type="email" id="q-correo" name="correo" placeholder="correo@empresa.com">
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-servicio">Tipo de servicio *</label>
+          <select id="q-servicio" name="servicio" required>
+            <option value="">Seleccione una opción</option>
+            <optgroup label="Empresas">
+              <option>Transporte empresarial</option>
+              <option>Transporte para colaboradores</option>
+              <option>Traslado corporativo</option>
+              <option>Servicio programado</option>
+              <option>Aeropuerto – empresa – hotel</option>
+              <option>Reunión o evento empresarial</option>
+            </optgroup>
+            <optgroup label="Personas y familias">
+              <option>Traslado al trabajo o estudio</option>
+              <option>Viaje fuera de la ciudad (Melgar, fincas, etc.)</option>
+              <option>Paseo o salida familiar</option>
+              <option>Aeropuerto personal</option>
+            </optgroup>
+            <option>Otro</option>
+          </select>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-pasajeros">Número de pasajeros</label>
+          <input type="number" id="q-pasajeros" name="pasajeros" min="1" placeholder="Ej. 2">
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-fecha">Fecha *</label>
+          <input type="date" id="q-fecha" name="fecha" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-hora">Hora *</label>
+          <input type="time" id="q-hora" name="hora" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-origen">Origen *</label>
+          <input type="text" id="q-origen" name="origen" placeholder="Dirección de recogida" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field">
+          <label for="q-destino">Destino *</label>
+          <input type="text" id="q-destino" name="destino" placeholder="Dirección de destino" required>
+          <div class="err-msg"></div>
+        </div>
+        <div class="field full">
+          <label for="q-comentarios">Comentarios</label>
+          <textarea id="q-comentarios" name="comentarios" rows="4" placeholder="Detalles adicionales del servicio"></textarea>
+          <div class="err-msg"></div>
+        </div>
+      </div>
+      <div class="form-foot">
+        <p class="form-note">Al enviar, se abrirá WhatsApp con los datos de su solicitud para confirmarla directamente.</p>
+        <button type="submit" class="btn btn-primary">Solicitar cotización</button>
+      </div>
+      <div class="form-success" id="formSuccess">✓ Datos listos. Se abrirá WhatsApp para enviar su solicitud.</div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contacto</span>
+      <h2>Hablemos de su próximo traslado</h2>
+      <p>Estamos disponibles para resolver sus dudas y coordinar su servicio.</p>
+      <a href="https://wa.me/573006068984?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20transporte%20empresarial" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:20px;">Escribir por WhatsApp <span class="arrow">→</span></a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/573006068984" target="_blank" rel="noopener">+57 300 606 8984</a></p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>Teléfono</h3>
+        <p><a href="tel:+573006068984">+57 300 606 8984</a></p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg></div>
+        <h3>Correo</h3>
+        <p><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Horario de atención</h3>
+        <p>Lunes a viernes<br>8:00 a.m. – 5:00 p.m.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="logo-mark">MB</span> MB Movilidad</a>
+        <p style="font-style:italic;color:var(--gold-light);margin-bottom:10px;">"Movilidad que cumple su palabra."</p>
+        <p>Soluciones de movilidad de alto estándar, con vehículo de servicio público habilitado (placa blanca) — para organizaciones y para personas particulares.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Todos los servicios</a></li>
+          <li><a href="#empresas">Para empresas</a></li>
+          <li><a href="#personas">Para personas y familias</a></li>
+          <li><a href="#calculadora">Tarifas</a></li>
+          <li><a href="#planeacion">Planeación</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/573006068984" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="tel:+573006068984">+57 300 606 8984</a></li>
+          <li><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> MB Movilidad. Todos los derechos reservados.</span>
+      <span>Servicio de transporte terrestre — placa blanca</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa-float" href="https://wa.me/573006068984?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20transporte%20empresarial" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.28-1.38a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.32a8.24 8.24 0 0 1-1.26-4.34c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.83c0 4.56-3.71 8.22-8.26 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.48-.01a.93.93 0 0 0-.67.31c-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+<script>
+// header scroll state
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => mobileMenu.style.display = 'flex');
+menuClose.addEventListener('click', () => mobileMenu.style.display = 'none');
+document.querySelectorAll('.mm-link').forEach(l => l.addEventListener('click', () => mobileMenu.style.display = 'none'));
+
+// scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => io.observe(el));
+
+// footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// quote form validation + whatsapp
+const form = document.getElementById('quoteForm');
+const successBox = document.getElementById('formSuccess');
+const WHATSAPP_NUMBER = '573006068984';
+
+function setError(field, message) {
+  field.classList.toggle('error', !!message);
+  const msgEl = field.parentElement.querySelector('.err-msg');
+  if (msgEl) msgEl.textContent = message || '';
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  successBox.classList.remove('show');
+  let valid = true;
+
+  const required = ['nombre', 'telefono', 'servicio', 'fecha', 'hora', 'origen', 'destino'];
+  required.forEach(name => {
+    const field = form.elements[name];
+    if (!field.value.trim()) {
+      setError(field, 'Este campo es obligatorio para procesar su solicitud.');
+      valid = false;
+    } else {
+      setError(field, '');
+    }
+  });
+
+  const telefono = form.elements['telefono'];
+  if (telefono.value.trim() && !/^[0-9+()\s-]{7,15}$/.test(telefono.value.trim())) {
+    setError(telefono, 'Ingrese un número de teléfono válido.');
+    valid = false;
+  }
+
+  const correo = form.elements['correo'];
+  if (correo.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo.value.trim())) {
+    setError(correo, 'Ingrese un correo electrónico válido.');
+    valid = false;
+  }
+
+  if (!valid) {
+    form.querySelector('.error')?.focus();
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  const lines = [
+    'Hola, quiero solicitar una cotización de transporte empresarial:',
+    `Nombre: ${data.nombre}`,
+    data.empresa ? `Empresa: ${data.empresa}` : null,
+    `Teléfono: ${data.telefono}`,
+    data.correo ? `Correo: ${data.correo}` : null,
+    `Servicio: ${data.servicio}`,
+    data.pasajeros ? `Pasajeros: ${data.pasajeros}` : null,
+    `Fecha: ${data.fecha}`,
+    `Hora: ${data.hora}`,
+    `Origen: ${data.origen}`,
+    `Destino: ${data.destino}`,
+    data.comentarios ? `Comentarios: ${data.comentarios}` : null,
+  ].filter(Boolean).join('\n');
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
+  successBox.classList.add('show');
+  window.open(url, '_blank', 'noopener');
+});
+
+// tabs (servicios / empresas)
+function initTabs(navId) {
+  const nav = document.getElementById(navId);
+  if (!nav) return;
+  nav.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const shell = nav.closest('.tabs-shell');
+      shell.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      shell.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      if (target) target.classList.add('active');
+    });
+  });
+}
+initTabs('serviceTabsNav');
+initTabs('corpTabsNav');
+initTabs('personasTabsNav');
+
+// preselect service in quote form from a service panel CTA
+document.querySelectorAll('.tab-quote-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const service = btn.dataset.service;
+    const select = document.getElementById('q-servicio');
+    if (select && service) {
+      const match = Array.from(select.options).find(o => o.value === service);
+      if (match) select.value = service;
+    }
+  });
+});
+
+</script>
+</body>
+</html>
