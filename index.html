@@ -391,6 +391,7 @@ nav.links a:hover::after{width:100%;}
 .corporate p{color:rgba(255,255,255,.85);margin-bottom:26px;max-width:520px;}
 .corporate-list{display:flex;flex-direction:column;gap:12px;margin-bottom:30px;}
 .corporate-list li{display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.92);font-size:.95rem;}
+.corporate-list li::before{content:"✓";font-weight:700;color:#fff;flex-shrink:0;}
 .corporate-card{
   background:rgba(255,255,255,.1);
   border:1px solid rgba(255,255,255,.18);
@@ -400,6 +401,8 @@ nav.links a:hover::after{width:100%;}
 }
 .corporate-card h4{font-size:.95rem;margin-bottom:16px;color:rgba(255,255,255,.9);}
 .corporate-card ul{display:flex;flex-direction:column;gap:10px;font-size:.88rem;color:rgba(255,255,255,.75);}
+.corporate-card ul li{display:flex;gap:10px;align-items:flex-start;}
+.corporate-card ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.6;margin-top:6px;flex-shrink:0;}
 
 .corporate-personas{
   background:linear-gradient(135deg,var(--gold) 0%,#a3792f 100%);
@@ -1197,19 +1200,19 @@ footer{background:var(--graphite);color:rgba(255,255,255,.65);padding:64px 0 28p
           <h2>Un aliado de movilidad para su compañía</h2>
           <p>Trabajamos con organizaciones mediante servicios programados y acuerdos adaptados a los requerimientos de movilidad de su equipo, con la seriedad que un cliente corporativo requiere.</p>
           <ul class="corporate-list">
-            <li>✓ Servicios programados según la frecuencia que su organización necesite.</li>
-            <li>✓ Coordinación directa con un único punto de contacto.</li>
-            <li>✓ Acuerdos adaptados a su operación, sujeto a disponibilidad y condiciones aplicables.</li>
+            <li>Servicios programados según la frecuencia que su organización necesite.</li>
+            <li>Coordinación directa con un único punto de contacto.</li>
+            <li>Acuerdos adaptados a su operación, sujeto a disponibilidad y condiciones aplicables.</li>
           </ul>
           <a href="#cotizacion" class="btn btn-dark" style="background:#fff;color:var(--accent);">Solicitar propuesta empresarial <span class="arrow">→</span></a>
         </div>
         <div class="corporate-card">
           <h4>Ideal para</h4>
           <ul>
-            <li>🏢 Empresas con desplazamientos frecuentes de personal</li>
-            <li>📆 Rutas fijas o programadas</li>
-            <li>🤝 Traslado de visitantes y clientes</li>
-            <li>🎯 Eventos o actividades corporativas puntuales</li>
+            <li>Empresas con desplazamientos frecuentes de personal</li>
+            <li>Rutas fijas o programadas</li>
+            <li>Traslado de visitantes y clientes</li>
+            <li>Eventos o actividades corporativas puntuales</li>
           </ul>
         </div>
       </div>
