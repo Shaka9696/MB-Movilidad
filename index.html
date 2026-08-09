@@ -491,11 +491,14 @@ nav.links a:hover::after{width:100%;}
   border-radius:20px;
   padding:44px;
 }
-.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.field{display:flex;flex-direction:column;gap:8px;}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;min-width:0;}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0;}
 .field.full{grid-column:1/-1;}
 .field label{font-size:.85rem;color:rgba(255,255,255,.7);font-weight:500;}
 .field input,.field select,.field textarea{
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
   background:var(--graphite-2);
   border:1px solid rgba(255,255,255,.12);
   border-radius:10px;
