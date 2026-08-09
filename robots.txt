@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaka9696.github.io/MB-Movilidad/sitemap.xml
