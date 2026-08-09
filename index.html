@@ -1863,6 +1863,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const form = document.getElementById('quoteForm');
 const successBox = document.getElementById('formSuccess');
 const WHATSAPP_NUMBER = '573006068984';
+const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwo-AnZiq3cyJP1LMFwegVkJlBRaJOszhRue9oorsi2cMDjZWxL92OgIUpKparf9UFdcQ/exec';
 
 function setError(field, message) {
   field.classList.toggle('error', !!message);
@@ -1928,6 +1929,14 @@ form.addEventListener('submit', (e) => {
   ].filter(Boolean).join('\n');
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
+
+  fetch(SHEETS_ENDPOINT, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(data),
+  }).catch(() => {});
+
   successBox.classList.add('show');
   window.open(url, '_blank', 'noopener');
 });
